@@ -1,21 +1,12 @@
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
+// android/app/build.gradle
+android {
+    compileSdkVersion 33
+
+    defaultConfig {
+        applicationId "com.example.firedoor_check"
+        minSdkVersion 21
+        targetSdkVersion 33
+        // ...
     }
-}
-
-val newBuildDir: Directory = rootProject.layout.buildDirectory.dir("../../build").get()
-rootProject.layout.buildDirectory.value(newBuildDir)
-
-subprojects {
-    val newSubprojectBuildDir: Directory = newBuildDir.dir(project.name)
-    project.layout.buildDirectory.value(newSubprojectBuildDir)
-}
-subprojects {
-    project.evaluationDependsOn(":app")
-}
-
-tasks.register<Delete>("clean") {
-    delete(rootProject.layout.buildDirectory)
+    // ...
 }
