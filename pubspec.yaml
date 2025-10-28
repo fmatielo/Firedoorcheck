@@ -1,0 +1,34 @@
+name: firedoor_check
+description: A lightweight inspection app for landlords, property managers, and residents to record quick safety checks on residential fire doors.
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # UI
+  cupertino_icons: ^1.0.8
+
+  # Storage (JSON file on device)
+  path_provider: ^2.1.4
+
+  # Photos (camera/gallery) for each checklist item
+  image_picker: ^1.1.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  # assets:
+  #   - assets/
+  # fonts:
+  #   - family: Inter
+  #     fonts:
+  #       - asset: assets/fonts/Inter-Regular.ttf
